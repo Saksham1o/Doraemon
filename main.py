@@ -157,3 +157,156 @@ def Doremon():
     nose()
     mouth()
     whisker()
+
+    # For drawing the body outline
+    my_goto(0, 0)
+    seth(0)
+    penup()
+    circle(150, 50)
+    pendown()
+    seth(30)
+    fd(40)
+    seth(70)
+    circle(-30, 270)
+
+    # For filling the body color
+    fillcolor("#00a0de")
+    begin_fill()
+    seth(230)
+    fd(80)
+    seth(90)
+    circle(1000, 1)
+    seth(-89)
+    circle(-1000, 10)
+
+    seth(180)
+    fd(70)
+    seth(90)
+    circle(30, 180)
+    seth(180)
+    fd(70)
+
+    seth(100)
+    circle(-1000, 9)
+    seth(-86)
+    circle(1000, 2)
+    seth(230)
+    fd(40)
+
+    circle(-30, 230)
+    seth(45)
+    fd(81)
+    seth(0)
+    fd(203)
+    circle(5, 90)
+    fd(10)
+    circle(5, 90)
+    fd(7)
+    seth(40)
+    circle(150, 10)
+    seth(30)
+    fd(40)
+    end_fill()
+
+    # For filling right palm color
+    seth(70)
+    fillcolor("#ffffff")
+    begin_fill()
+    circle(-30)
+    end_fill()
+
+    # For filling left foot color
+    my_goto(103.74, -182.59)
+    seth(0)
+    fillcolor("#ffffff")
+    begin_fill()
+    fd(15)
+    circle(-15, 180)
+    fd(90)
+    circle(-15, 180)
+    fd(10)
+    end_fill()
+
+    # For filling right foot color
+    my_goto(-96.26, -182.59)
+    seth(180)
+    fillcolor("#ffffff")
+    begin_fill()
+    fd(15)
+    circle(15, 180)
+    fd(90)
+    circle(15, 180)
+    fd(10)
+    end_fill()
+
+    # For filling left palm color
+    my_goto(-184.67, -61.59)
+    seth(70)
+    fillcolor("#ffffff")
+    begin_fill()
+    circle(-30)
+    end_fill()
+
+    # For drawing the inner body circle
+    my_goto(-103.42, 15.09)
+    seth(0)
+    fd(38)
+    seth(230)
+    begin_fill()
+    circle(90, 260)
+    end_fill()
+
+    # For drawing the semicircle
+    my_goto(5, -40)
+    seth(0)
+    fd(70)
+    seth(-90)
+    circle(-70, 180)
+    seth(0)
+    fd(70)
+
+    # For drawing the bell
+    my_goto(-103.42, 15.09)
+    fd(90)
+    seth(70)
+    fillcolor("#ffd200")
+    begin_fill()
+    circle(-20)
+    end_fill()
+    seth(170)
+    fillcolor("#ffd200")
+    begin_fill()
+    circle(-2, 180)
+    seth(10)
+    circle(-100, 22)
+    circle(-2, 180)
+    seth(170)
+    circle(100, 22)
+    end_fill()
+    goto(-13.42, 15.09)
+    seth(250)
+    circle(20, 110)
+    seth(90)
+    fd(15)
+    dot(10)
+    my_goto(0, 150)
+
+    black_eyes()
+
+
+# Main function
+if __name__ == '__main__':
+    # Window control
+    screensize(800, 600, "#f0f0f0")
+    screen = Screen()
+    screen.setup(width=1.0, height=1.0)
+
+    # Setting teh pen size
+    pensize(3)
+
+    # Setting the speed
+    speed(10)
+    Doremon()
+    my_goto(250, -230)
+    write("by Codewithcurious.com", font=("Arial", 15))
+    mainloop()
